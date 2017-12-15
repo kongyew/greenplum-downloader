@@ -1,0 +1,21 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Greenplum downloader"
+theme = "kube"
+description = "Use this tool to automatically download Greenplum releases from Pivotal Network"
+Paginate = 4
+[Params]
+  RSSLink = "/index.xml"
+  author = "KongYew" # add your company name
+  github = "kongyew" # add your github profile name
+  twitter = "kongyew" # add your twitter profile
+  email = "kongyew@gmail.com"
+
+[[menu.main]]
+    name = "Docs"
+    weight = -100
+    url = "/docs/"
+[[menu.main]]
+    name = "About"
+    weight = -100
+    url = "/about/"
