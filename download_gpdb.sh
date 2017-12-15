@@ -124,7 +124,7 @@ popd
 # Use this parameter to download a particular release.
 #PRODUCT_RELEASE="4.3.17.0"
 # Change the variable below to download a particular version
-PRODUCT_RELEASE="5.2.0"
+PRODUCT_RELEASE="5.3.0"
 
 DEBUG=false
 if [ $# -eq 0 ]

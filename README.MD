@@ -4,7 +4,7 @@ This page describes how to automatically download Greenplum release files from [
 
 ## Getting Started
 
-These instructions helps to download Greenplum releases from Pivotal Network.
+These instructions help to download Greenplum releases from Pivotal Network.
 
 ### Prerequisites
 
@@ -13,7 +13,7 @@ These instructions helps to download Greenplum releases from Pivotal Network.
 
 ### Installing
 
-A step by step series of examples that tell you have to get started
+A step by step instructions that helps you to get started
 
 1. Clone this repository by using git clone <repo>
 2. Configure (Pivnet CLI)[https://github.com/pivotal-cf/pivnet-cli]
