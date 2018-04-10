@@ -7,7 +7,7 @@ This page describes how to automatically download Greenplum release files from [
 These instructions help to download Greenplum releases from Pivotal Network.
 
 ### Prerequisites
-
+- [jq](https://stedolan.github.io/jq/download/)
 - [PivNet-cli](https://github.com/pivotal-cf/pivnet-cli)
 - Pivotal Network account with [API Token](https://network.pivotal.io/users/dashboard/edit-profile)
 
@@ -16,7 +16,13 @@ These instructions help to download Greenplum releases from Pivotal Network.
 A step by step instructions that helps you to get started
 
 1. Clone this repository by using git clone <repo>
-2. Configure (Pivnet CLI)[https://github.com/pivotal-cf/pivnet-cli]
+2. Install jq and Pivnet cli
+Install these binaries by following these commands below or run ./setup.sh
+```
+brew install jq
+brew install pivotal/tap/pivnet-cli
+```
+3. Configure (Pivnet CLI)[https://github.com/pivotal-cf/pivnet-cli]
 ```
 $pivnet login --api-token='my-api-token'
 $Logged-in successfully
@@ -29,7 +35,7 @@ $ pivnet products
 ...
 +-----+--------------------------------------------+--------------------------------+
 ```
-3. Run this script to verify GPDB versions
+4. Run this script to verify GPDB versions
 ```
 $ ./list_gpdb_versions.sh
 No arguments supplied
@@ -54,14 +60,14 @@ List of pivotal-gpdb versions:
   "release_type": "Minor Release"
 }
 ```
-4. Change PRODUCT_RELEASE variable in this file "greenplum/download_gpdb.sh"
+5. Change PRODUCT_RELEASE variable in this file "greenplum/download_gpdb.sh"
 Optionally, you can change this DOWNLOAD_FOLDER_PREFIX variable to configure the target download directory.
 ```
 PRODUCT_RELEASE="5.2.0"
 ```
-5. Run this file "greenplum/download_gpdb.sh" to start downloading process
+6. Run this file "greenplum/download_gpdb.sh" to start downloading process
 
-6. Verify the Greenplum files are downloaded in "DOWNLOAD_5.2.0"
+7. Verify the Greenplum files are downloaded in "DOWNLOAD_5.2.0"
 
 ## Authors
 
