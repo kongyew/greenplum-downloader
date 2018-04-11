@@ -94,8 +94,11 @@ pivnet file-groups -p pivotal-gpdb --format=json -r $PRODUCT_RELEASE  accept-eul
 
 
 export PRODUCT_RHEL7_FILE="product_files/Pivotal-Greenplum/greenplum-db-$PRODUCT_RELEASE-rhel7-x86_64.zip"
+export PRODUCT_RHEL6_FILE="product_files/Pivotal-Greenplum/greenplum-db-$PRODUCT_RELEASE-rhel6-x86_64.zip"
 
 
+
+jq --arg PRODUCT_RHEL6_FILE "$PRODUCT_RHEL6_FILE" -rc '.[]  | .product_files[] | {key: .aws_object_key , href: ._links.download.href } |  select(.key | contains($PRODUCT_RHEL6_FILE)) '   $productfiles >> $files
 jq --arg PRODUCT_RHEL7_FILE "$PRODUCT_RHEL7_FILE" -rc '.[]  | .product_files[] | {key: .aws_object_key , href: ._links.download.href } |  select(.key | contains($PRODUCT_RHEL7_FILE)) '   $productfiles >> $files
 #jq -rc '.[]  | .product_files[] | {key: .aws_object_key , href: ._links.download.href } '   $productfiles >> $files
 
