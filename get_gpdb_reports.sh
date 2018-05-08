@@ -62,9 +62,3 @@ fi
 # wget -O "<filename>" --header="Authorization: Token <API Token>" https://network.pivotal.io/api/v2/products/<product-id>/releases/<release-id>/product_files/<product-file-id>/download
 # Get products list
 curl --silent -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Token ${API_TOKEN}" -X GET https://network.pivotal.io/reports/product_file_downloads?external_users=true&product=pivotal-gpdb  > gpdb.csv
-
-
-
-
-
-# wget  --output-document=gemfire.csv --header="Authorization: Token token=$API_TOKEN"  https://network.pivotal.io/reports/product_file_downloads?external_users=true&product=pivotal-gemfire
