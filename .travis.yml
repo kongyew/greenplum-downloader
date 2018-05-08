@@ -1,0 +1,17 @@
+sudo: required
+os: osx
+
+before_install:
+  - brew update
+  - brew install jq
+  - brew install pivotal/tap/pivnet-cli
+  - cd ${TRAVIS_BUILD_DIR}
+  - git clone https://github.com/kongyew/greenplum-downloader.git
+#  - cd greenplum-dockers
+
+script:
+    - cd ${TRAVIS_BUILD_DIR}/greenplum-downloader
+    - cd greenplum-downloader
+    - pivnet login --api-token='${APITOKEN}'
+    - ./download_gpdb.sh
+    - ls -al DOWNLOAD_5.8.0
