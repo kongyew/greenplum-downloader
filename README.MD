@@ -2,6 +2,8 @@
 
 This page describes how to automatically download Greenplum release files from [Pivotal Network](https://network.pivotal.io/).  It assumes you have the [Pivnet account](https://login.run.pivotal.io/create_account?client_id=pivnet-production&redirect_uri=https://network.pivotal.io/login) with the appropriate permissions.
 
+[![Build Status](https://travis-ci.org/kongyew/greenplum-downloader.svg?branch=master)](https://travis-ci.org/kongyew/greenplum-downloader)
+
 ## Getting Started
 
 These instructions help to download Greenplum releases from Pivotal Network.
