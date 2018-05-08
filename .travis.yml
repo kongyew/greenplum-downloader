@@ -11,7 +11,6 @@ before_install:
 
 script:
     - cd ${TRAVIS_BUILD_DIR}/greenplum-downloader
-    - cd greenplum-downloader
     - pivnet login --api-token='${APITOKEN}'
-    - ./download_gpdb.sh ${APITOKEN} 5.8.0
+    - ./download_gpdbinstaller.sh ${APITOKEN} 5.8.0
     - ls -al DOWNLOAD_5.8.0
